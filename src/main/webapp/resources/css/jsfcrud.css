@@ -1,0 +1,46 @@
+.ui-widget {
+    font-size: 12px !important;
+}
+.ui-layout-north {
+    z-index: 20 !important;
+    overflow: visible !important;;
+}
+.ui-layout-north .ui-layout-unit-content {
+    overflow: visible !important;
+}
+/*.ui-header {    
+    height: 40px;
+    font-size: 0.7vw;
+    text-align: center;
+    text-transform: uppercase;
+
+    vertical-align: auto;
+    background: white;
+    
+     #000033;
+    color: black;  beige;
+}*/
+
+.ui-button {
+    margin-top: 10px !important;
+}
+.customPanel .ui-panel-titlebar {
+    color: black;
+    background-color: white;
+    height: 100px;
+}
+
+
+.customFooter{
+    color: black;
+    background-color: white;
+}
+
+.customHeader > .ui-panel-titlebar{
+    height: 100%; 
+    background-color: white !important;
+    text-align: center;
+}
+
+
+

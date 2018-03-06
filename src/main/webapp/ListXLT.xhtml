@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title><ui:insert name="title">List of Tools</ui:insert></title>
+    <h:outputStylesheet library="css" name="jsfcrud.css"/>
+
+    <!--<h:outputScript library="js" name="jsfcrud.js"/>-->
+</h:head>
+<h:body>
+    <p:layoutUnit position="center">
+        <h:form id="PxltTableListForm">
+
+
+            <p:panel header="#{bundle.ListPxltTableTitle}" styleClass="customHeader">
+                <f:facet name="header" parent="" id="facet_style">
+                    <p:graphicImage value="/resources/images/logo.png" width="370" height="80"
+                                    style="float: left"></p:graphicImage>
+                    <label style="height: 80px; line-height: 80px; white-space: nowrap; font-size: 1.2vw; text-align: center; text-transform: uppercase">#{bundle.ListPxltTableTitle}</label>
+                    <h:outputLink style="float: right; font-size: 0.7vw; margin-bottom: 2px"
+                                  value="https://compomics.com/">CompOmics Group Link</h:outputLink>
+                </f:facet>
+
+                <p:dataTable style="margin-top: 2px" id="datalist" value="#{pxltEntryBean.items}" var="item"
+                             selectionMode="single"
+                             paginator="true"
+                             resizableColumns="true"
+                             rowKey="#{item.pmid}"
+                             rows="10"
+                             rowsPerPageTemplate="10,20,30,40,50"
+                             tableStyleClass="customDataTable"
+                             tableStyle="width:auto"
+                >
+
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="#{bundle.ListPxltTableTitle_pmid}"/>
+                        </f:facet>
+                        <h:outputText value="#{item.pmid}"/>
+                    </p:column>
+
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="#{bundle.ListPxltTableTitle_toolName}"/>
+                        </f:facet>
+                        <h:outputText value="#{item.toolName}"/>
+                    </p:column>
+
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="#{bundle.ListPxltTableTitle_toolType}"/>
+                        </f:facet>
+                        <h:outputText value="#{item.toolType}"/>
+                    </p:column>
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="#{bundle.ListPxltTableTitle_interface1}"/>
+                        </f:facet>
+                        <h:outputText value="#{item.interface1}"/>
+                    </p:column>
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="#{bundle.ListPxltTableTitle_publishedYear}"/>
+                        </f:facet>
+                        <h:outputText value="#{item.publishedYear}"/>
+                    </p:column>
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="#{bundle.ListPxltTableTitle_scoringFun}"/>
+                        </f:facet>
+                        <h:outputText value="#{item.scoringFun}"/>
+                    </p:column>
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="#{bundle.ListPxltTableTitle_MSCleavable}"/>
+                        </f:facet>
+                        <h:outputText value="#{item.MSCleavable}"/>
+                    </p:column>
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="#{bundle.ListPxltTableTitle_labeling}"/>
+                        </f:facet>
+                        <h:outputText value="#{item.labeling}"/>
+                    </p:column>
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="#{bundle.ListPxltTableTitle_decoy}"/>
+                        </f:facet>
+                        <h:outputText value="#{item.decoy}"/>
+                    </p:column>
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="#{bundle.ListPxltTableTitle_devLanguage}"/>
+                        </f:facet>
+                        <h:outputText value="#{item.devLanguage}"/>
+                    </p:column>
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="#{bundle.ListPxltTableTitle_availability}"/>
+                        </f:facet>
+                        <h:outputText value="#{item.availability}"/>
+                    </p:column>
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="#{bundle.ListPxltTableTitle_webAddress}"/>
+                        </f:facet>
+                        <h:outputText value="#{item.webAddress}"/>
+                    </p:column>
+                </p:dataTable>
+            </p:panel>
+        </h:form>
+    </p:layoutUnit>
+</h:body>
+</html>
+

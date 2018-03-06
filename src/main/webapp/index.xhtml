@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Welcom!</title>
+        <h:outputStylesheet name="css/jsfcrud.css"/>
+        <h:outputStylesheet name="css/custom.css"/>
+    </h:head>
+    <h:body>
+        
+        
+        <div class="container">
+            <ui:insert name="header">
+                <ui:include src="header.xhtml" />
+            </ui:insert>
+
+           <!--// <h:form>-->
+                
+<!--                <p:growl id="growl" sticky="true" showDetail="true"/>
+            
+               
+            <p:panelGrid   columns="2"  style="position: absolute; top: auto; left: 500px; margin: 0 auto">
+                <f:facet   name="header"> Login Form</f:facet>
+                
+                <h:outputText value="User Name"/>                
+                <p:inputText style="margin-left:3px"  value="#{pxltTableController.username}"/>  
+                
+               
+                
+                <h:outputText value="Password"/>                
+                <p:inputText style="margin-left:3px" value="#{pxltTableController.password}"/>
+                
+                <f:facet name="footer">
+                    <p:commandButton  value="Login"  action="#{pxltTableController.logincontrol()}"/>
+                    
+                </f:facet>
+                                 
+                
+                
+            </p:panelGrid>-->
+
+<div id="welcom" class="welcomclass">
+<label style="text-align: center; font-size: 0.9vw; margin-top: "> Welcome to the CompOmics Group
+this project aims to collect and deliver all information about tools used in the analysis of protein cross linking </label>
+    
+    <p:commandButton id="savebutton" value="Go to List" action="/pxltTable/List.xhtml"/>
+           </div>
+            <!--</h:form>-->
+
+
+            <ui:insert name="footer">
+                <ui:include src="footer.xhtml" />
+            </ui:insert>
+        </div>
+
+    </h:body>
+
+</html>
+
